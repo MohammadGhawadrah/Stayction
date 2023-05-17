@@ -1,0 +1,12 @@
+.DrawerAppBar {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 100%;
+    height: 94px;
+    background-color: beige;
+}
+
+b {
+    color: #152C5B
+}
