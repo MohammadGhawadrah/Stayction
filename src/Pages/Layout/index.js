@@ -1,9 +1,10 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
+import Header from '../../Component/Header/indx'
 function Layout() {
     return (
         <div>
-            <header>this is page header</header>
+            <Header />
             <Outlet />
             <footer>this is page footer</footer>
         </div>
