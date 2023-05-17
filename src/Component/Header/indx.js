@@ -20,7 +20,6 @@ const drawerWidth = 240;
 const navItems = ['Home', 'Browseby', 'Stories', 'Agents'];
 
 function DrawerAppBar(props) {
-    const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
 
     const handleDrawerToggle = () => {
@@ -30,7 +29,7 @@ function DrawerAppBar(props) {
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
             <Typography variant="h6" color="secondary" sx={{ my: 2 }}>
-                Stay<b>cation</b>
+                Stay<b className={style.blogo}>cation</b>
             </Typography>
             <Divider />
             <List >
@@ -45,7 +44,7 @@ function DrawerAppBar(props) {
         </Box>
     );
 
-    const container = window !== undefined ? () => window().document.body : undefined;
+
 
     return (
         <Box sx={{ display: 'flex' }}>
@@ -67,7 +66,7 @@ function DrawerAppBar(props) {
                         color="secondary"
                         sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
                     >
-                        Stay<b>cation</b>
+                        Stay<b className={style.blogo} >cation</b>
                     </Typography>
                     <Box
 
@@ -83,7 +82,6 @@ function DrawerAppBar(props) {
             <Box component="nav" >
                 <Drawer
                     color="primary"
-                    container={container}
                     variant="temporary"
                     open={mobileOpen}
                     onClose={handleDrawerToggle}
@@ -105,12 +103,5 @@ function DrawerAppBar(props) {
     );
 }
 
-DrawerAppBar.propTypes = {
-    /**
-     * Injected by the documentation to work in an iframe.
-     * You won't need it on your project.
-     */
-    window: PropTypes.func,
-};
 
 export default DrawerAppBar;
