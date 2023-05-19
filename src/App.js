@@ -11,11 +11,14 @@ const theme = createTheme({
     secondary: {
       main: '#3252DF'
     },
-    action:{
+    thired: {
+      main: '#B0B0B0'
+    },
+    action: {
       hover: purple
+    }
   }
-  }
-  
+
 })
 function App() {
   return (
