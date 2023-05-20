@@ -3,7 +3,7 @@ import Router from './Route';
 import { createTheme } from '@mui/material/styles';
 import { ThemeProvider } from '@mui/material'
 import { purple } from '@mui/material/colors'
-import IconsDetailPage from './../src/Component/IconsHomePage'
+import HeroImage from './Component/HeroImage';
 const theme = createTheme({
   palette: {
     primary: {
@@ -16,15 +16,17 @@ const theme = createTheme({
       main: '#B0B0B0'
     },
     action: {
-      hover: purple
+      action: {
+        hover: purple
+      }
     }
-  }
 
-})
+  })
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <IconsDetailPage />
+      {/*<Router />*/}
+      <HeroImage />
     </ThemeProvider>
   );
 }

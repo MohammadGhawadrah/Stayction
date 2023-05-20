@@ -1,0 +1,25 @@
+.heroImg {
+    border-top-left-radius: 100px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    height: 410.63px;
+    width: 520px;
+
+    position: absolute;
+}
+
+.heroBorderImg {
+    border: 3px solid #E5E5E5;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    height: 410.63px;
+    width: 520px;
+    position: absolute;
+    margin-left: 53px;
+    margin-bottom: 39px;
+    margin-top: 51px;
+    margin-right: 39px;
+}
