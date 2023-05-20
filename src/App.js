@@ -3,6 +3,7 @@ import Router from './Route';
 import { createTheme } from '@mui/material/styles';
 import { ThemeProvider } from '@mui/material'
 import { purple } from '@mui/material/colors'
+import IconsDetailPage from './../src/Component/IconsHomePage'
 const theme = createTheme({
   palette: {
     primary: {
@@ -23,7 +24,7 @@ const theme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Router />
+      <IconsDetailPage />
     </ThemeProvider>
   );
 }

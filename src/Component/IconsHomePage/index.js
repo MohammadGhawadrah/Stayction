@@ -12,7 +12,7 @@ function IconsHomePage() {
 
 
     return (
-        <div>
+        <Box>
             <Grid
                 container
                 direction="row"
@@ -43,7 +43,7 @@ function IconsHomePage() {
                 </Box>
             </Grid>
 
-        </div>
+        </Box>
     )
 }
 

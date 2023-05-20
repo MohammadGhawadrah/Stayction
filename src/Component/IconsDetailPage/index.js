@@ -16,7 +16,7 @@ function IconsDetailPage() {
 
 
     return (
-        <div>
+        <Box>
             <Grid
                 container
                 direction="row"
@@ -94,7 +94,7 @@ function IconsDetailPage() {
 
             </Grid>
 
-        </div>
+        </Box>
     )
 }
 
