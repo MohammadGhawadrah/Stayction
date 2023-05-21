@@ -1,33 +1,33 @@
 import * as React from 'react';
-import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Image from './../HeroImage';
-//import IconsHomePage from './../IconsHomePage';
+import IconsHomePage from './../IconsHomePage';
 import MainButton from './../MainButton';
 import Typography from '@mui/material/Typography';
-const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-}));
+import { createTheme } from "@mui/material/styles";
 
-export default function ColumnsGrid() {
+const theme = createTheme({
+    GridTheme: {
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-around",
+        height: 500,
+    }
+});
+
+export default function Hero() {
     return (
-        <Box sx={{ flexGrow: 1 }}>
-            <Grid container spacing={2} columns={16}>
-                <Grid item xs={8}>
-                    <Typography variant="h3" color="primary">Forget Busy Work,
-                        Start Next Vacation</Typography>
-                    <Item>xs=8</Item>
-                    <Item><MainButton Text={"Show me More"} /></Item>
-                    {/*<Item><IconsHomePage /></Item>*/}
+        <Box position={'relative'}>
+            <Grid container spacing={6} columns={{ xs: 12, md: 16 }}>
+                <Grid sx={theme.GridTheme} item xs={12} md={8}>
+                    <Typography variant="h3" color="primary">Forget Busy Work, Start Next Vacation</Typography>
+                    <Typography variant="h5" color="thired.main">We provide what you need to enjoy your holiday with family. Time to make another memorable moments.</Typography>
+                    <MainButton Text={"Show me More"} />
+                    <IconsHomePage />
                 </Grid>
-                <Grid item xs={8}>
-                    <Item><Image /></Item>
+                <Grid item xs={12} md={4}>
+                    <Image />
                 </Grid>
             </Grid>
         </Box>
