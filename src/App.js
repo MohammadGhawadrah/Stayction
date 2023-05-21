@@ -12,11 +12,16 @@ const theme = createTheme({
     secondary: {
       main: '#3252DF'
     },
+    thired: {
+      main: '#B0B0B0'
+    },
     action: {
-      hover: purple
+      action: {
+        hover: purple
+      }
     }
-  }
 
+  }
 })
 function App() {
   return (
