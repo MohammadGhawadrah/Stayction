@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 
 export default function MainButton({ Text }) {
     return (
-        <Button variant="contained" disableElevation>
+        <Button sx={{ width: 200 }} color="secondary" variant="contained" disableElevation>
             {Text}
         </Button>
     );

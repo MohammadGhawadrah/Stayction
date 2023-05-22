@@ -6,8 +6,6 @@ function HeroImage() {
         <div >
             <div className={style.heroBorderImg}></div>
             <img className={style.heroImg} src={img} />
-
-
         </div>
     )
 }

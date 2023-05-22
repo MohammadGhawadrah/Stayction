@@ -3,7 +3,7 @@ import Router from './Route';
 import { createTheme } from '@mui/material/styles';
 import { ThemeProvider } from '@mui/material'
 import { purple } from '@mui/material/colors'
-import HeroImage from './Component/HeroImage';
+
 const theme = createTheme({
   palette: {
     primary: {
@@ -26,8 +26,7 @@ const theme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      {/*<Router />*/}
-      <HeroImage />
+      <Router />
     </ThemeProvider>
   );
 }
