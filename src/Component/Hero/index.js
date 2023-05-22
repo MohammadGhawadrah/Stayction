@@ -6,19 +6,7 @@ import IconsHomePage from './../IconsHomePage';
 import MainButton from './../MainButton';
 import Typography from '@mui/material/Typography';
 import { createTheme } from "@mui/material/styles";
-import { styled } from '@mui/system';
-
-
-
-
-const StyledGrid = styled('div')({
-
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "space-around",
-    height: 500,
-
-});
+import { StyledGrid } from '../Hero/style';
 
 export default function Hero() {
     return (
