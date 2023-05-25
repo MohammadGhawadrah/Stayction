@@ -1,0 +1,8 @@
+.topComment {
+    border-radius: 0px 15px 0px 15px;
+    height: 40px;
+    width: 180px;
+    text-align: center;
+    margin-left: 181px;
+    position: absolute;
+}
