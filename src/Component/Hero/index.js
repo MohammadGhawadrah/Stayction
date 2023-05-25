@@ -10,12 +10,12 @@ import { StyledGrid } from '../Hero/style';
 
 export default function Hero() {
     return (
-        <Box position={'relative'}>
+        <Box sx={{ position: 'relative' }}>
             <Grid container spacing={6} columns={{ xs: 12, md: 16 }}>
                 <Grid item xs={12} md={8}><StyledGrid>
                     <Typography variant="h3" color="primary">Forget Busy Work, Start Next Vacation</Typography>
                     <Typography variant="h5" color="thired.main">We provide what you need to enjoy your holiday with family. Time to make another memorable moments.</Typography>
-                    <MainButton Text={"Show me More"} />
+                    <MainButton text={"Show me More"} />
                     <IconsHomePage /></StyledGrid>
                 </Grid>
                 <Grid item xs={12} md={4}>

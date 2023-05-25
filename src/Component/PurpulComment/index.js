@@ -3,11 +3,11 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import style from './style.module.css';
 
-function PurpulComment({ Text }) {
+function PurpulComment({ text }) {
     return (
         <Box className={style.topComment}>
-            <Typography className={style.topComment} color={"fifth.main"} backgroundColor={"forth.main"} variant="h6"
-            >{Text}</Typography>
+            <Typography className={style.topComment} color={"white"} backgroundColor={"forth.main"} variant="h6"
+            >{text}</Typography>
         </Box>
     )
 }

@@ -1,5 +1,5 @@
 import { createTheme } from '@mui/material/styles';
-
+import { white } from '@mui/material/colors';
 
 const customTheme = createTheme({
     palette: {
@@ -15,9 +15,9 @@ const customTheme = createTheme({
         forth: {
             main: '#FF498B'
         },
-        fifth: {
+        /*fifth: {
             main: '#FFFFFF'
-        },
+        },*/
 
     },
 

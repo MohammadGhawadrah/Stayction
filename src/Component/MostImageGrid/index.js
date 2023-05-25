@@ -9,14 +9,14 @@ import style from './style.module.css';
 import Typography from '@mui/material/Typography';
 function MostImageGrid() {
     return (
-        <Box>
+        <Box sx={{ position: 'relative' }}>
             <Typography variant="h3" color="primary">Most Picked</Typography>
 
             <Grid >{mostImageGridData[0].map((item) =>
                 <Box>
                     <MostImage img={item.img} />
-                    < PurpulComment Text={item.topComment} />
-                    <MostImageComment Text={item.describtion} />
+                    < PurpulComment text={item.topComment} />
+                    <MostImageComment text={item.describtion} />
                 </Box>
             )
             }</Grid>
@@ -24,8 +24,8 @@ function MostImageGrid() {
                 {mostImageGridData[1].map((item) =>
                     <Box>
                         <MostImage img={item.img} />
-                        < PurpulComment Text={item.topComment} />
-                        <MostImageComment Text={item.describtion} />
+                        < PurpulComment text={item.topComment} />
+                        <MostImageComment text={item.describtion} />
                     </Box>
                 )
                 }</div>
