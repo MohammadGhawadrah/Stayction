@@ -1,7 +1,7 @@
 import React from 'react'
-import img from '../../../src/Assets/hero.png'
+
 import style from './style.module.css';
-function HeroImage() {
+function HeroImage({ img }) {
     return (
         <div >
             <div className={style.heroBorderImg}></div>

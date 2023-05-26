@@ -7,7 +7,7 @@ import MainButton from './../MainButton';
 import Typography from '@mui/material/Typography';
 import { createTheme } from "@mui/material/styles";
 import { StyledGrid } from '../Hero/style';
-
+import img from '../../../src/Assets/hero.png'
 export default function Hero() {
     return (
         <Box sx={{ position: 'relative' }}>
@@ -19,7 +19,7 @@ export default function Hero() {
                     <IconsHomePage /></StyledGrid>
                 </Grid>
                 <Grid item xs={12} md={4}>
-                    <Image />
+                    <Image img={img} />
                 </Grid>
             </Grid>
         </Box>
