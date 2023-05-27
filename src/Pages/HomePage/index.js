@@ -6,7 +6,7 @@ function HomePage() {
     return (
         <div>
             <Hero />
-            { /*< MostImageGrid />*/}
+            < MostImageGrid />
             <HappyFamily />
         </div>
     )
