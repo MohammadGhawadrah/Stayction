@@ -9,17 +9,6 @@ import MostImage from '../MostImage';
 import { Typography } from '@mui/material';
 import { StyleHouse, ThemeHouse } from "./style";
 const HousesBackyard = () => {
-    const theme = createTheme({
-        BoxTheme: {
-            display: "column",
-            justifyContent: "space-between",
-            width: 300,
-            marginTop: 25,
-        },
-        PurpulCommentTheme: {
-            marginLeft: -12.2,
-        }
-    });
     return (
         <Grid sx={{ position: 'relative' }}>
             <MainTitle text={"Houses with beauty backyard"} />
