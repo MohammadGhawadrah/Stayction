@@ -7,7 +7,7 @@ import PurpulComment from '../PurpulComment';
 import MostImageComment from '../MostImageComment';
 import MostImage from '../MostImage';
 import { Typography } from '@mui/material';
-import { StylApartment } from "./style";
+import { StyleApartment, ThemeApartment } from "./style";
 const ApartmentsSet = () => {
     const theme = createTheme({
         BoxTheme: {
@@ -23,11 +23,11 @@ const ApartmentsSet = () => {
             <Grid container>
                 {ApartmentsSetData.map((product, index) => index < 4 && (<Grid key={product.id} item xs={12} sm={6} md={3}>
                     <MostImage img={product.img} />
-                    <Box><StylApartment>
-                        {product.topComment ? <PurpulComment text={product.topComment} /> : null}</StylApartment></Box>
-                    <Box sx={theme.BoxTheme}>
+                    <Box><StyleApartment>
+                        {product.topComment ? <PurpulComment text={product.topComment} /> : null}</StyleApartment></Box>
+                    <Box><ThemeApartment>
                         <Typography variant="myVariant">{product.name}</Typography>
-                        <Grid><Typography variant="detail">{product.describtion}</Typography></Grid></Box>
+                        <Grid><Typography variant="detail">{product.describtion}</Typography></Grid></ThemeApartment></Box>
                 </Grid>))}
             </Grid>
         </Grid>

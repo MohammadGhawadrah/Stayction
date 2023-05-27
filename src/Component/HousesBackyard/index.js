@@ -7,7 +7,7 @@ import PurpulComment from '../PurpulComment';
 import MostImageComment from '../MostImageComment';
 import MostImage from '../MostImage';
 import { Typography } from '@mui/material';
-import { StyleHouse } from "./style";
+import { StyleHouse, ThemeHouse } from "./style";
 const HousesBackyard = () => {
     const theme = createTheme({
         BoxTheme: {
@@ -28,12 +28,12 @@ const HousesBackyard = () => {
                     <MostImage img={product.img} />
                     <Box><StyleHouse>
                         {product.topComment ? <PurpulComment text={product.topComment} /> : null}</StyleHouse></Box>
-                    <Box sx={theme.BoxTheme}>
+                    <Box><ThemeHouse>
                         <Typography variant="myVariant">{product.name}</Typography>
-                        <Grid><Typography variant="detail">{product.describtion}</Typography></Grid></Box>
+                        <Grid><Typography variant="detail">{product.describtion}</Typography></Grid></ThemeHouse></Box>
                 </Grid>))}
             </Grid>
-        </Grid>
+        </Grid >
     );
 };
 export default HousesBackyard;
