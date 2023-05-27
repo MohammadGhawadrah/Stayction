@@ -1,8 +1,6 @@
 import { styled } from '@mui/system';
 
 export const ThemeHouse = styled('div')({
-
-    display: "column",
     justifyContent: "space-between",
     width: 300,
     marginTop: 30,
