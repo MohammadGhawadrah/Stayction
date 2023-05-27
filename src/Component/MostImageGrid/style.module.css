@@ -5,5 +5,5 @@
     grid-template-rows: repeat(1, 220px);
     gap: 20px;
     width: 500px;
-
+    position: relative;
 }
