@@ -11,7 +11,7 @@ import { StyleHotel, ThemeHotel } from "./style";
 const HotelsRoom = () => {
 
     return (
-        <Grid sx={{ position: 'relative', marginTop: 10 }}>
+        <Grid sx={{ position: 'relative', marginTop: 15 }}>
             <MainTitle text={"Hotels with large living room"} />
             <Grid container>
                 {HotelsRoomData.map((product, index) => index < 4 && (<Grid key={product.id} item xs={12} sm={6} md={3}>

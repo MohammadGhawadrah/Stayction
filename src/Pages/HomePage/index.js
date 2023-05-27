@@ -10,6 +10,9 @@ function HomePage() {
         <div>
             <Hero />
             < MostImageGrid />
+            <HousesBackyard />
+            <HotelsRoom />
+            <ApartmentsSet />
             <HappyFamily />
         </div>
     )
