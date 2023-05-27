@@ -11,14 +11,7 @@ import { styled } from '@mui/system';
 import MostImage from '../MostImage';
 import Stars from '../Rating';
 import style from './style.module.css';
-export const StyledGrid = styled('div')({
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "space-around",
-    height: 500,
-
-});
-
+import { StyledGrid } from './style';
 export default function HappyFamily() {
     return (
         <Box sx={{ position: 'relative' }}>
