@@ -6,12 +6,11 @@ import MostImageComment from '../MostImageComment';
 import MostImage from '../MostImage';
 import { mostImageGridData } from './data';
 import style from './style.module.css';
-import Typography from '@mui/material/Typography';
+import MainTitle from '../MainTitle';
 function MostImageGrid() {
     return (
-        <Box sx={{ position: 'relative' }}>
-            <Typography variant="h3" color="primary">Most Picked</Typography>
-
+        <Box sx={{ height: 600 }}>
+            <MainTitle text={"Most Picked"} />
             <Grid >{mostImageGridData[0].map((item) =>
                 <Box>
                     <MostImage img={item.img} />
