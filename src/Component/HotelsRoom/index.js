@@ -7,6 +7,7 @@ import PurpulComment from '../PurpulComment';
 import MostImageComment from '../MostImageComment';
 import MostImage from '../MostImage';
 import { Typography } from '@mui/material';
+import { StylHotel } from "./style";
 const HotelsRoom = () => {
     const theme = createTheme({
         BoxTheme: {
@@ -15,9 +16,6 @@ const HotelsRoom = () => {
             width: 300,
             marginTop: 25,
         },
-        PurpulCommentTheme: {
-            marginLeft: -12.2,
-        }
     });
     return (
         <Grid sx={{ position: 'relative', marginTop: 10 }}>
@@ -25,8 +23,8 @@ const HotelsRoom = () => {
             <Grid container>
                 {HotelsRoomData.map((product, index) => index < 4 && (<Grid key={product.id} item xs={12} sm={6} md={3}>
                     <MostImage img={product.img} />
-                    <Box sx={theme.PurpulCommentTheme}>
-                        {product.topComment ? <PurpulComment text={product.topComment} /> : null}</Box>
+                    <Box><StylHotel>
+                        {product.topComment ? <PurpulComment text={product.topComment} /> : null}</StylHotel></Box>
                     <Box sx={theme.BoxTheme}>
                         <Typography variant="myVariant">{product.name}</Typography>
                         <Grid><Typography variant="detail">{product.describtion}</Typography></Grid></Box>

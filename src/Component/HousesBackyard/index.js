@@ -7,6 +7,7 @@ import PurpulComment from '../PurpulComment';
 import MostImageComment from '../MostImageComment';
 import MostImage from '../MostImage';
 import { Typography } from '@mui/material';
+import { StyleHouse } from "./style";
 const HousesBackyard = () => {
     const theme = createTheme({
         BoxTheme: {
@@ -25,8 +26,8 @@ const HousesBackyard = () => {
             <Grid container>
                 {HousesBackyardData.map((product, index) => index < 4 && (<Grid key={product.id} item xs={12} sm={6} md={3}>
                     <MostImage img={product.img} />
-                    <Box sx={theme.PurpulCommentTheme}>
-                        {product.topComment ? <PurpulComment text={product.topComment} /> : null}</Box>
+                    <Box><StyleHouse>
+                        {product.topComment ? <PurpulComment text={product.topComment} /> : null}</StyleHouse></Box>
                     <Box sx={theme.BoxTheme}>
                         <Typography variant="myVariant">{product.name}</Typography>
                         <Grid><Typography variant="detail">{product.describtion}</Typography></Grid></Box>
