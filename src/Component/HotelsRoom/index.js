@@ -11,14 +11,14 @@ import { StyleHotel, ThemeHotel } from "./style";
 const HotelsRoom = () => {
 
     return (
-        <Grid sx={{ position: 'relative', marginTop: 15 }}>
+        <Grid sx={{ position: 'relative', marginTop: 5 }}>
             <MainTitle text={"Hotels with large living room"} />
             <Grid container>
                 {HotelsRoomData.map((product, index) => index < 4 && (<Grid key={product.id} item xs={12} sm={6} md={3}>
                     <MostImage img={product.img} />
                     <Box><StyleHotel>
                         {product.topComment ? <PurpulComment text={product.topComment} /> : null}</StyleHotel></Box>
-                    <Box><ThemeHotel>
+                    <Box sx={{ marginTop: 25 }}><ThemeHotel>
                         <Typography variant="myVariant">{product.name}</Typography>
                         <Grid><Typography variant="detail">{product.describtion}</Typography></Grid></ThemeHotel></Box>
                 </Grid>))}

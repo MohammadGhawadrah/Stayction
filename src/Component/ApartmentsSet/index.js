@@ -10,14 +10,14 @@ import { Typography } from '@mui/material';
 import { StyleApartment, ThemeApartment } from "./style";
 const ApartmentsSet = () => {
     return (
-        <Grid sx={{ position: 'relative', marginTop: 15 }}>
+        <Grid sx={{ position: 'relative', marginTop: 5 }}>
             <MainTitle text={"Apartments with kitchen set"} />
             <Grid container>
                 {ApartmentsSetData.map((product, index) => index < 4 && (<Grid key={product.id} item xs={12} sm={6} md={3}>
                     <MostImage img={product.img} />
                     <Box><StyleApartment>
                         {product.topComment ? <PurpulComment text={product.topComment} /> : null}</StyleApartment></Box>
-                    <Box><ThemeApartment>
+                    <Box sx={{ marginTop: 25 }}><ThemeApartment>
                         <Typography variant="myVariant">{product.name}</Typography>
                         <Grid><Typography variant="detail">{product.describtion}</Typography></Grid></ThemeApartment></Box>
                 </Grid>))}

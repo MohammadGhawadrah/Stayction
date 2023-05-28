@@ -17,7 +17,7 @@ const HousesBackyard = () => {
                     <MostImage img={product.img} />
                     <Box><StyleHouse>
                         {product.topComment ? <PurpulComment text={product.topComment} /> : null}</StyleHouse></Box>
-                    <Box><ThemeHouse>
+                    <Box sx={{ marginTop: 25 }}><ThemeHouse>
                         <Typography variant="myVariant">{product.name}</Typography>
                         <Grid><Typography variant="detail">{product.describtion}</Typography></Grid></ThemeHouse></Box>
                 </Grid>))}
