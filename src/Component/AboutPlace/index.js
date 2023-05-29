@@ -7,8 +7,8 @@ import IconsDetailPage from '../IconsDetailPage';
 import StartBooking from '../StartBooking';
 export default function AboutPlace() {
     return (
-        <Box sx={{ position: 'relative', marginTop: 5 }}>
-            <Grid container spacing={20} columns={{ xs: 10, sm: 8, md: 12 }}>
+        <Box sx={{ marginTop: 5 }}>
+            <Grid container spacing={15} columns={{ xs: 10, sm: 8, md: 12 }}>
                 <Grid item xs={12} sm={6} md={6}>
                     <Typography variant="h4" color="primary">About the place</Typography>
                     <Typography variant="h6" color="textSecondary" sx={{ marginBottom: 4 }}>

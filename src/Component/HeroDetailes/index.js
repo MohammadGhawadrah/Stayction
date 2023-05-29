@@ -9,12 +9,12 @@ import img1 from '../../Assets/detail-1.png';
 import img2 from '../../Assets/detail-2.png';
 import img3 from '../../Assets/detail-3.png';
 import { Grid } from '@mui/material';
-function handleClick(event) {
-    event.preventDefault();
-    console.info('You clicked a breadcrumb.');
-}
 
 export default function HeroDetailes() {
+    function handleClick(event) {
+        event.preventDefault();
+        console.info('You clicked a breadcrumb.');
+    }
     return (
         <div role="presentation" onClick={handleClick}>
             <Breadcrumbs aria-label="breadcrumb">
