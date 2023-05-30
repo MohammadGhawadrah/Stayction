@@ -1,9 +1,12 @@
 import React from 'react'
+import HeroDetailes from '../../Component/HeroDetailes'
+import AboutPlace from '../../Component/AboutPlace'
 
 function DetailesPage() {
     return (
         <div>
-            this is Detailes Page
+            <HeroDetailes />
+            <AboutPlace />
         </div>
     )
 }
