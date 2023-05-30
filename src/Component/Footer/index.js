@@ -60,9 +60,9 @@ function FormRow() {
 }
 export default function Footer() {
     return (
-        <Box sx={{ flexGrow: 1, position: 'relative', marginTop: 10 }}>
+        <Box sx={{ flexGrow: 1, position: 'relative', marginTop: 10 }}  >
             <Divider sx={{ marginBottom: 6 }} />
-            <Grid container spacing={1} >
+            <Grid container spacing={1}  >
                 <Grid container item spacing={1}>
                     <FormRow />
                 </Grid>

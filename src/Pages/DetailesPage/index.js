@@ -1,12 +1,11 @@
 import React from 'react'
-import HeroDetailes from '../../Component/HeroDetailes'
-import AboutPlace from '../../Component/AboutPlace'
-
+import Treasure from '../../Component/Treasure'
+import HappyFamilyDetailPage from '../../Component/HappyFamilyDetailPage'
 function DetailesPage() {
     return (
         <div>
-            <HeroDetailes />
-            <AboutPlace />
+            <Treasure />
+            <HappyFamilyDetailPage />
         </div>
     )
 }
