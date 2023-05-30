@@ -15,7 +15,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import style from './style.module.css';
-
+import { Link } from 'react-router-dom';
 const drawerWidth = 240;
 const navItems = ['Home', 'Browseby', 'Stories', 'Agents'];
 
@@ -32,12 +32,18 @@ function DrawerAppBar(props) {
                 Stay<b className={style.blogo}>cation</b>
             </Typography>
             <Divider />
-            <List >
+            <List>
                 {navItems.map((item) => (
                     <ListItem key={item} disablePadding>
-                        <ListItemButton sx={{ textAlign: 'center' }}>
-                            <ListItemText primary={item} />
-                        </ListItemButton>
+                        {item === 'Home' ? (
+                            <ListItemButton sx={{ textAlign: 'center' }}>
+                                <Link to="/">{item}</Link>
+                            </ListItemButton>
+                        ) : (
+                            <ListItemButton sx={{ textAlign: 'center' }}>
+                                <ListItemText primary={item} />
+                            </ListItemButton>
+                        )}
                     </ListItem>
                 ))}
             </List>
@@ -71,11 +77,14 @@ function DrawerAppBar(props) {
                     <Box
 
                         sx={{ display: { xs: 'none', sm: 'block' } }}>
-                        {navItems.map((item) => (
-                            <Button key={item} color="primary">
+                        {navItems.map((item) => (<>
+                            {item === 'Home' ? (<Link style={{ textDecoration: "none" }} to={`/`}>
+                                <Button key={item} color="primary">
+                                    {item}
+                                </Button></Link>) : <Button key={item} color="primary">
                                 {item}
-                            </Button>
-                        ))}
+                            </Button>}
+                        </>))}
                     </Box>
                 </Toolbar>
             </AppBar>

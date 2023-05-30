@@ -65,7 +65,6 @@ export default function Footer() {
             <Grid container spacing={1}  >
                 <Grid container item spacing={1}>
                     <FormRow />
-
                 </Grid>
             </Grid>
             <Typography variant="h7" color="secondary">
