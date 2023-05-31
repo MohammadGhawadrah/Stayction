@@ -3,6 +3,7 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
+import { theme } from "./style";
 import style from './style.module.css';
 import Divider from '@mui/material/Divider';
 
@@ -11,7 +12,7 @@ function FormRow() {
         <React.Fragment>
             <Grid item xs={3} >
                 <Typography marginBottom={2} variant="h6" color="secondary">
-                    Stay<b className={style.blogo} >cation</b>
+                    Stay <b className={style.blogo}> cation</b>
                 </Typography>
                 <Typography variant="detail">
                     <Box>We kaboom your beauty holiday
@@ -68,7 +69,7 @@ export default function Footer() {
                 </Grid>
             </Grid>
             <Typography variant="h7" color="secondary">
-                <div className={style.bcopy}> Copyright 2019 • All rights reserved • Staycation</div>
+                <Box sx={theme.bcopy}> Copyright 2019 • All rights reserved • Staycation</Box>
             </Typography>
         </Box>
     );

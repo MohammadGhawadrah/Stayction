@@ -8,6 +8,7 @@ import { StyleHotel, ThemeHotel } from "./style";
 import { useState } from "react";
 import axios from "axios";
 import Loading from "../Loading";
+import AddToCart from "../AddToCart";
 const HotelsRoom = () => {
     const [HotelsRoomData, setHotelsRoomData] = useState();
     const getData = async () => {
@@ -23,7 +24,7 @@ const HotelsRoom = () => {
             {HotelsRoomData ?
                 <Grid container>
                     {HotelsRoomData.map((product, index) => index < 4 && (<Grid key={product.id} item xs={12} sm={6} md={3}>
-                        <MostImage img={product.img} />
+                        <MostImage img={product.img} /><AddToCart id={product.id} />
                         <Box><StyleHotel>
                             {product.topComment ? <PurpulComment text={product.topComment} /> : null}</StyleHotel></Box>
                         <Box sx={{ marginTop: 25 }}><ThemeHotel>
