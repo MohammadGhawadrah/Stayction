@@ -16,6 +16,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import style from './style.module.css';
 import { Link } from 'react-router-dom';
+import Logo from '../Logo';
 const drawerWidth = 240;
 const navItems = ['Home', 'Browseby', 'Stories', 'Agents'];
 
@@ -28,9 +29,7 @@ function DrawerAppBar(props) {
 
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-            <Typography variant="h6" color="secondary" sx={{ my: 2 }}>
-                Stay<b className={style.blogo}>cation</b>
-            </Typography>
+            <Logo />
             <Divider />
             <List>
                 {navItems.map((item) => (
@@ -66,14 +65,7 @@ function DrawerAppBar(props) {
                     >
                         <MenuIcon />
                     </IconButton>
-                    <Typography
-                        variant="h6"
-                        component="div"
-                        color="secondary"
-                        sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-                    >
-                        Stay<b className={style.blogo} >cation</b>
-                    </Typography>
+                    <Logo />
                     <Box
 
                         sx={{ display: { xs: 'none', sm: 'block' } }}>

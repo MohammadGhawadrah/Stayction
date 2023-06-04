@@ -5,7 +5,16 @@ import Typography from '@mui/material/Typography';
 import { styled } from '@mui/system';
 import IconsDetailPage from '../IconsDetailPage';
 import StartBooking from '../StartBooking';
+import { useParams } from "react-router-dom";
+import { useContext } from "react";
+import ProductContext from "../Context";
 export default function AboutPlace() {
+    const products = useContext(ProductContext);
+    const { productId } = useParams();
+    if (products) {
+        var dataId = products.find((item) => item.id == productId);
+        var { title, img, topComment, name, description } = dataId;
+    }
     return (
         <Box sx={{ marginTop: 5 }}>
             <Grid container spacing={15} columns={{ xs: 10, sm: 8, md: 12 }}>
