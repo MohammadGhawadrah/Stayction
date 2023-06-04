@@ -11,7 +11,6 @@ function IndDecButton() {
         { count > 0 ? setCount(count - 1) : setCount(count == 0) }
     }
     return (
-
         <ButtonGroup sx={{ border: 'none', fontSize: '24px', }}>
             <Button onClick={decrementCount} style={{ minWidth: 45, color: 'white', background: '#E74C3C' }} sx={{ m: 0, p: 0 }}>-</Button>
             <Button style={{ minWidth: 230, backgroundColor: '#F5F6F8', color: 'secondary' }} >{count} nights </Button>

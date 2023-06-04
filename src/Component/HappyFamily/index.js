@@ -2,12 +2,8 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import img from '../../Assets/happyfamily.png'
-import Image from './../HeroImage';
-import IconsHomePage from './../IconsHomePage';
 import MainButton from './../MainButton';
 import Typography from '@mui/material/Typography';
-import { createTheme } from "@mui/material/styles";
-import { styled } from '@mui/system';
 import MostImage from '../MostImage';
 import Stars from '../Rating';
 import style from './style.module.css';

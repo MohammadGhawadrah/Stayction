@@ -6,14 +6,13 @@ import Typography from '@mui/material/Typography';
 import { theme } from "./style";
 import style from './style.module.css';
 import Divider from '@mui/material/Divider';
+import Logo from '../Logo';
 
 function FormRow() {
     return (
         <React.Fragment>
             <Grid item xs={3} >
-                <Typography marginBottom={2} variant="h6" color="secondary">
-                    Stay <b className={style.blogo}> cation</b>
-                </Typography>
+                <Logo />
                 <Typography variant="detail">
                     <Box>We kaboom your beauty holiday
                         instantly and memorable</Box>
