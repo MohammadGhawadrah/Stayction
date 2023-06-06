@@ -24,7 +24,7 @@ const HousesBackyard = () => {
                             {product.topComment ? <PurpulComment text={product.topComment} /> : null}</StyleHouse></Box>
                         <Box sx={{ marginTop: 25 }}><ThemeHouse>
                             <Typography variant="myVariant">{product.name}</Typography>
-                            <Grid><Typography variant="detail">{product.describtion}</Typography></Grid></ThemeHouse></Box>
+                            <Grid><Typography variant="detail">{product.description}</Typography></Grid></ThemeHouse></Box>
                     </Grid>))}
                 </Grid> : <Loading />
             }

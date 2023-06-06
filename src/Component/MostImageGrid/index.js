@@ -28,7 +28,7 @@ function MostImageGrid() {
                         <Box>
                             <MostImage img={item.img} />
                             < PurpulComment text={item.topComment} />
-                            <MostImageComment text={item.describtion} />
+                            <MostImageComment text={item.description} />
                         </Box>
                     )
                     }</Grid>
@@ -37,7 +37,7 @@ function MostImageGrid() {
                             <Box>
                                 <MostImage img={item.img} />
                                 < PurpulComment text={item.topComment} />
-                                <MostImageComment text={item.describtion} />
+                                <MostImageComment text={item.description} />
                             </Box>
                         )
                         }</div>

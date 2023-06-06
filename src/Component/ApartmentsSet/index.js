@@ -25,7 +25,7 @@ const ApartmentsSet = () => {
                                 {product.topComment ? <PurpulComment text={product.topComment} /> : null}</StyleApartment></Box>
                             <Box sx={{ marginTop: 25 }}><ThemeApartment>
                                 <Typography variant="myVariant">{product.name}</Typography>
-                                <Grid><Typography variant="detail">{product.describtion}</Typography></Grid></ThemeApartment></Box>
+                                <Grid><Typography variant="detail">{product.description}</Typography></Grid></ThemeApartment></Box>
                         </Grid>))}
                 </Grid> : <Loading />}
         </Grid>

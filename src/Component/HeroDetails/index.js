@@ -13,8 +13,9 @@ import { useParams } from "react-router-dom";
 import { WidthFull } from '@mui/icons-material';
 import { useContext } from "react";
 import ProductContext from "../Context";
+import Loading from '../Loading';
 
-export default function HeroDetailes() {
+export default function HeroDetails() {
     function handleClick(event) {
         event.preventDefault();
         console.info('You clicked a breadcrumb.');
@@ -34,7 +35,7 @@ export default function HeroDetailes() {
                         <Link underline="hover" color="inherit" to="/">
                             Home
                         </Link>
-                        <Typography color="text.primary">Detailes </Typography>
+                        <Typography color="text.primary">Details </Typography>
                     </Breadcrumbs>
 
                     <Typography variant="myVariant"><Box sx={{ textAlign: 'center' }}>{title}</Box></Typography>
@@ -51,7 +52,7 @@ export default function HeroDetailes() {
                     >
                         <Grid><Grid sx={{ marginBottom: 32 }} ><MostImage img={img3} /></Grid>
                             <Grid> <MostImage img={img} s /></Grid></Grid>
-                        <Grid> <MostImage img={img1} sx={{ WidthFull }} /></Grid></Stack> </Grid> : <div>Loading </div>}
+                        <Grid> <MostImage img={img1} sx={{ WidthFull }} /></Grid></Stack> </Grid> : <Loading />}
         </div>
     );
 }

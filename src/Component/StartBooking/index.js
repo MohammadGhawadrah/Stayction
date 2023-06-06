@@ -8,12 +8,13 @@ import { styled } from '@mui/system';
 import { StyledGrid } from './style';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import { useParams } from "react-router-dom";
-import { useContext } from "react";
+import { json, useParams } from "react-router-dom";
+import { useContext, useEffect } from "react";
 import ProductContext from "../Context";
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 function StartBooking() {
     const products = useContext(ProductContext);
     const { productId } = useParams();
@@ -23,6 +24,7 @@ function StartBooking() {
     }
     const [count, setCount] = useState(0);
     const [sumNight, setsumNight] = useState(0);
+
     const incrementCount = () => {
         setCount(count + 1);
         setsumNight((count + 1) * price);
@@ -31,7 +33,10 @@ function StartBooking() {
         { count > 0 ? setCount(count - 1) && setsumNight((count - 1) * price) : setCount(count == 0) && setsumNight(0) }
         setsumNight((count - 1) * price);
     }
-
+    useEffect(() => {
+        localStorage.setItem('sumNight', sumNight)
+        console.log("sumNight", sumNight)
+    }, [sumNight])
 
     return (
         <Grid sx={{ borderColor: 'black' }} item xs={12} sm={6} md={6}>
@@ -59,7 +64,9 @@ function StartBooking() {
                     ' per  ' <Typography variant="myVariant" sx={{ fontSize: 20 }}>{count} nights</Typography>
                 </Typography></Box>
 
-                <MainButton text={"Continue to Book"} />
+                <Link style={{ textDecoration: "none" }} to={`/Booking/${productId}`}>
+                    <MainButton text={"Continue to Book"} />
+                </Link>
             </StyledGrid>
         </Grid>
     )

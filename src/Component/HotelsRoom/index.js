@@ -24,7 +24,7 @@ const HotelsRoom = () => {
                             {product.topComment ? <PurpulComment text={product.topComment} /> : null}</StyleHotel></Box>
                         <Box sx={{ marginTop: 25 }}><ThemeHotel>
                             <Typography variant="myVariant">{product.name}</Typography>
-                            <Grid><Typography variant="detail">{product.describtion}</Typography></Grid></ThemeHotel></Box>
+                            <Grid><Typography variant="detail">{product.description}</Typography></Grid></ThemeHotel></Box>
                     </Grid>))}
                 </Grid> : <Loading />}
         </Grid>

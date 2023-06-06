@@ -1,12 +1,12 @@
 import Treasure from '../../Component/Treasure'
 import HappyFamilyDetailPage from '../../Component/HappyFamilyDetailPage'
-import HeroDetailes from '../../Component/HeroDetailes'
+import HeroDetails from '../../Component/HeroDetails'
 import AboutPlace from '../../Component/AboutPlace'
-function DetailesPage() {
+function DetailsPage() {
 
     return (
         <div>
-            <HeroDetailes />
+            <HeroDetails />
             <AboutPlace />
             <Treasure />
             <HappyFamilyDetailPage />
@@ -14,4 +14,4 @@ function DetailesPage() {
     )
 }
 
-export default DetailesPage
+export default DetailsPage

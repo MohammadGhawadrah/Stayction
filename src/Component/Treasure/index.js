@@ -24,7 +24,7 @@ const Treasure = () => {
                             {product.topComment ? <PurpulComment text={product.topComment} /> : null}</StyleTreasure></Box>
                         <Box sx={{ marginTop: 25 }}><ThemeTreasure>
                             <Typography variant="myVariant">{product.name}</Typography>
-                            <Grid><Typography variant="detail">{product.describtion}</Typography></Grid></ThemeTreasure></Box>
+                            <Grid><Typography variant="detail">{product.description}</Typography></Grid></ThemeTreasure></Box>
                     </Grid>))}
                 </Grid> : <Loading />}
         </Grid >
