@@ -16,7 +16,7 @@ function CompleteTitle() {
             </Typography>
             <Box sx={{ marginTop: 5 }}> <Link style={{ textDecoration: "none" }} to={`/`}>
                 <MainButton text={"Back To Home"} /></Link></Box>
-            <AppBar component="nav" sx={{ position: 'relative', alignItems: 'center', backgroundColor: "#ffff", height: 80 }}></AppBar>
+            <Box sx={{ position: 'relative', height: 80 }}></Box>
         </Box>
     )
 }

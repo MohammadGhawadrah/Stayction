@@ -18,7 +18,6 @@ import Loading from '../Loading';
 export default function HeroDetails() {
     function handleClick(event) {
         event.preventDefault();
-        console.info('You clicked a breadcrumb.');
     }
     const products = useContext(ProductContext);
     const { productId } = useParams();
@@ -28,7 +27,7 @@ export default function HeroDetails() {
     }
     return (
 
-        <div role="presentation" onClick={handleClick}>
+        <Grid role="presentation" onClick={handleClick}>
             {dataId ?
                 <Grid>
                     <Breadcrumbs aria-label="breadcrumb">
@@ -50,9 +49,11 @@ export default function HeroDetails() {
                         position={'relative'}
                         marginBottom={40}
                     >
-                        <Grid><Grid sx={{ marginBottom: 32 }} ><MostImage img={img3} /></Grid>
-                            <Grid> <MostImage img={img} s /></Grid></Grid>
-                        <Grid> <MostImage img={img1} sx={{ WidthFull }} /></Grid></Stack> </Grid> : <Loading />}
-        </div>
+                        <Grid>
+                            <Grid sx={{ marginBottom: 32 }} ><MostImage img={img3} /></Grid>
+                            <MostImage img={img} />
+                        </Grid>
+                        <Grid> <MostImage img={img1} /></Grid></Stack> </Grid> : <Loading />}
+        </Grid>
     );
 }

@@ -1,14 +1,10 @@
-
 import MainButton from './../MainButton';
 import Typography from '@mui/material/Typography';
-import Stars from '../Rating';
-import IndDecButton from '../IndDecButton';
 import DateSelect from '../DateSelect';
-import { styled } from '@mui/system';
 import { StyledGrid } from './style';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import { json, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useContext, useEffect } from "react";
 import ProductContext from "../Context";
 import Button from '@mui/material/Button';
@@ -35,7 +31,6 @@ function StartBooking() {
     }
     useEffect(() => {
         localStorage.setItem('sumNight', sumNight)
-        console.log("sumNight", sumNight)
     }, [sumNight])
 
     return (

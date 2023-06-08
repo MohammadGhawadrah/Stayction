@@ -2,7 +2,6 @@ import React from 'react'
 import style from './style.module.css';
 import Box from '@mui/material/Box';
 
-
 function MostImage({ img }) {
     return (
         <Box>
@@ -11,5 +10,4 @@ function MostImage({ img }) {
         </Box>
     )
 }
-
 export default MostImage
