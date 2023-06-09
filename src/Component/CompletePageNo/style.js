@@ -13,13 +13,13 @@ export const theme = createTheme({
         width: 50,
         height: 50,
         bgcolor: '#1ABC9C',
-        margin: .4,
+        margin: .6,
     },
     AddNumberWithoutColor:
     {
         width: 50,
         height: 50,
-        margin: .4,
+        margin: .6,
     },
 
     AddCircle:

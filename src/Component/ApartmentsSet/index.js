@@ -40,7 +40,7 @@ const ApartmentsSet = () => {
                       </Typography>
                       <Grid>
                         <Typography variant="detail">
-                          {product.describtion}
+                          {product.description}
                         </Typography>
                       </Grid>
                     </ThemeApartment>

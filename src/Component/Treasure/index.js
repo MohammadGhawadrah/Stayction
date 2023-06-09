@@ -40,7 +40,7 @@ const Treasure = () => {
                       </Typography>
                       <Grid>
                         <Typography variant="detail">
-                          {product.describtion}
+                          {product.description}
                         </Typography>
                       </Grid>
                     </ThemeTreasure>

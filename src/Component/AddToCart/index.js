@@ -6,8 +6,8 @@ const AddToCart = ({ id }) => {
 
     return (
         <>
-            <Link style={{ textDecoration: "none" }} to={`/Detailes/${id}`}>
-                <Button sx={theme.AddCarttheme}>show Detailes</Button>
+            <Link style={{ textDecoration: "none" }} to={`/Details/${id}`}>
+                <Button sx={theme.AddCarttheme}>show Details</Button>
             </Link>
         </>
     );

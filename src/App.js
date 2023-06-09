@@ -5,7 +5,6 @@ import { ThemeProvider } from '@mui/material'
 import ProductProvider from './ContextProvider';
 
 function App() {
-
   return (
     <ProductProvider>
       <ThemeProvider theme={customTheme}>

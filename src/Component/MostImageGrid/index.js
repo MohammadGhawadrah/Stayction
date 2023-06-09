@@ -27,20 +27,20 @@ function MostImageGrid() {
       {mostImageGridData ? (
         <Grid>
           <Grid>
-            {mostImageGridData[0].map((item, index) => (
-              <Box key={index}>
+            {mostImageGridData[0].map((item) => (
+              <Box>
                 <MostImage img={item.img} />
-                <PurpleComment text={item.topComment} />
-                <MostImageComment text={item.describtion} />
+                <PurpulComment text={item.topComment} />
+                <MostImageComment text={item.description} />
               </Box>
             ))}
           </Grid>
           <div className={style.skeletoncontainer}>
-            {mostImageGridData[1].map((item, index) => (
-              <Box key={index}>
+            {mostImageGridData[1].map((item) => (
+              <Box>
                 <MostImage img={item.img} />
                 <PurpleComment text={item.topComment} />
-                <MostImageComment text={item.describtion} />
+                <MostImageComment text={item.description} />
               </Box>
             ))}
           </div>
