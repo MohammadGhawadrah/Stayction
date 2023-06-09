@@ -1,9 +1,12 @@
 .skeletoncontainer {
-    margin-left: 400px;
+  position: relative;
+}
+
+@media screen and (min-width: 992px) {
+  .skeletoncontainer {
     display: grid;
-    grid-template-columns: repeat(2, 380px);
+    grid-template-columns: repeat(2, 360px);
     grid-template-rows: repeat(1, 220px);
     gap: 20px;
-    width: 500px;
-    position: relative;
+  }
 }
