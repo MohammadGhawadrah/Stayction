@@ -4,7 +4,7 @@ import MainTitle from "../MainTitle";
 import PurpleComment from "../PurpleComment";
 import MostImage from "../MostImage";
 import { Typography } from "@mui/material";
-import { StyleApartment, ThemeApartment } from "./style";
+import { ThemeApartment } from "./style";
 import Loading from "../Loading";
 import AddToCart from "../AddToCart";
 import { useContext } from "react";
@@ -23,17 +23,22 @@ const ApartmentsSet = () => {
           {ApartmentsSetData.map(
             (product, index) =>
               index < 4 && (
-                <Grid key={product.id} item xs={12} sm={6} md={3}>
+                <Grid
+                  key={product.id}
+                  item
+                  xs={12}
+                  sm={6}
+                  md={3}
+                  sx={{ position: "relative" }}
+                >
                   <MostImage img={product.img} />
                   <AddToCart id={product.id} />
                   <Box>
-                    <StyleApartment>
-                      {product.topComment ? (
-                        <PurpleComment text={product.topComment} />
-                      ) : null}
-                    </StyleApartment>
+                    {product.topComment ? (
+                      <PurpleComment text={product.topComment} />
+                    ) : null}
                   </Box>
-                  <Box sx={{ marginTop: 25 }}>
+                  <Box>
                     <ThemeApartment>
                       <Typography variant="myVariant">
                         {product.name}

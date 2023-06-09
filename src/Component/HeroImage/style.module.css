@@ -1,15 +1,24 @@
 .heroImg {
-    border-radius: 100px 15px 15px 15px;
-    height: 410.63px;
-    width: 520px;
-    position: absolute;
+  border-radius: 100px 15px 15px 15px;
+  height: 410px;
+  width: 520px;
 }
 
 .heroBorderImg {
-    border: 3px solid #E5E5E5;
-    border-radius: 100px 15px 15px 15px;
-    margin: 51px 39px 39px 53px;
-    height: 410px;
-    width: 520px;
-    position: absolute;
+  border: 3px solid #e5e5e5;
+  border-radius: 100px 15px 15px 15px;
+  margin: 51px 39px 39px 53px;
+  height: 410px;
+  width: 520px;
+  position: absolute;
+  z-index: -1;
+}
+
+@media screen and (max-width: 769px) {
+  .heroImg {
+    width: 100%;
+  }
+  .heroBorderImg {
+    width: 88%;
+  }
 }

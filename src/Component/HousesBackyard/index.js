@@ -4,7 +4,7 @@ import MainTitle from "../MainTitle";
 import PurpleComment from "../PurpleComment";
 import MostImage from "../MostImage";
 import { Typography } from "@mui/material";
-import { StyleHouse, ThemeHouse } from "./style";
+import { ThemeHouse } from "./style";
 import Loading from "../Loading";
 import AddToCart from "../AddToCart";
 import { useContext } from "react";
@@ -23,17 +23,23 @@ const HousesBackyard = () => {
           {HousesBackyardData.map(
             (product, index) =>
               index < 4 && (
-                <Grid key={product.id} item xs={12} sm={6} md={3}>
+                <Grid
+                  key={product.id}
+                  item
+                  xs={12}
+                  sm={6}
+                  md={3}
+                  sx={{ position: "relative" }}
+                  spacing={2}
+                >
                   <MostImage img={product.img} />
                   <AddToCart id={product.id} />
                   <Box>
-                    <StyleHouse>
-                      {product.topComment ? (
-                        <PurpleComment text={product.topComment} />
-                      ) : null}
-                    </StyleHouse>
+                    {product.topComment ? (
+                      <PurpleComment text={product.topComment} />
+                    ) : null}
                   </Box>
-                  <Box sx={{ marginTop: 25 }}>
+                  <Box>
                     <ThemeHouse>
                       <Typography variant="myVariant">
                         {product.name}

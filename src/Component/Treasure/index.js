@@ -4,7 +4,7 @@ import MainTitle from "../MainTitle";
 import PurpleComment from "../PurpleComment";
 import MostImage from "../MostImage";
 import { Typography } from "@mui/material";
-import { StyleTreasure, ThemeTreasure } from "./style";
+import { ThemeTreasure } from "./style";
 import Loading from "../Loading";
 import AddToCart from "../AddToCart";
 import { useContext } from "react";
@@ -27,11 +27,9 @@ const Treasure = () => {
                   <MostImage img={product.img} />
                   <AddToCart id={product.id} />
                   <Box>
-                    <StyleTreasure>
-                      {product.topComment ? (
-                        <PurpleComment text={product.topComment} />
-                      ) : null}
-                    </StyleTreasure>
+                    {product.topComment ? (
+                      <PurpleComment text={product.topComment} />
+                    ) : null}
                   </Box>
                   <Box sx={{ marginTop: 25 }}>
                     <ThemeTreasure>

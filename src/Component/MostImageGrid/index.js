@@ -22,29 +22,53 @@ function MostImageGrid() {
   };
   useEffect(() => getData, []);
   return (
-    <Box sx={{ height: 600 }}>
+    <Box>
       <MainTitle text={"Most Picked"} />
       {mostImageGridData ? (
-        <Grid>
-          <Grid>
-            {mostImageGridData[0].map((item) => (
-              <Box>
-                <MostImage img={item.img} />
-                <PurpulComment text={item.topComment} />
-                <MostImageComment text={item.description} />
-              </Box>
-            ))}
+        // <Grid>
+        //   <Grid>
+        //     {mostImageGridData[0].map((item) => (
+        //       <Box>
+        //         <MostImage img={item.img} />
+        //         <PurpleComment text={item.topComment} />
+        //         <MostImageComment text={item.description} />
+        //       </Box>
+        //     ))}
+        //   </Grid>
+        //   <div className={style.skeletoncontainer}>
+        //     {mostImageGridData[1].map((item) => (
+        //       <Box>
+        //         <MostImage img={item.img} />
+        //         <PurpleComment text={item.topComment} />
+        //         <MostImageComment text={item.description} />
+        //       </Box>
+        //     ))}
+        //   </div>
+        // </Grid> */}
+        <Box sx={{ flexGrow: 1 }}>
+          <Grid container spacing={2}>
+            <Grid item xs={12} md={4}>
+              {mostImageGridData[0].map((item) => (
+                <Box sx={{ position: "relative" }}>
+                  <MostImage img={item.img} />
+                  <PurpleComment text={item.topComment} />
+                  <MostImageComment text={item.description} />
+                </Box>
+              ))}
+            </Grid>
+            <Grid item xs={12} md={8}>
+              <div className={style.skeletoncontainer}>
+                {mostImageGridData[1].map((item) => (
+                  <Box sx={{ position: "relative" }}>
+                    <MostImage img={item.img} />
+                    <PurpleComment text={item.topComment} />
+                    <MostImageComment text={item.description} />
+                  </Box>
+                ))}
+              </div>
+            </Grid>
           </Grid>
-          <div className={style.skeletoncontainer}>
-            {mostImageGridData[1].map((item) => (
-              <Box>
-                <MostImage img={item.img} />
-                <PurpleComment text={item.topComment} />
-                <MostImageComment text={item.description} />
-              </Box>
-            ))}
-          </div>
-        </Grid>
+        </Box>
       ) : (
         <Loading />
       )}
